@@ -2,7 +2,7 @@ import psycopg2
 
 class DBConnection:
     def __enter__(self):
-        self.conn = psycopg2.connect(dbname='calender', user='postgres', password='postgres', host='192.168.184.51')
+        self.conn = psycopg2.connect(dbname='calender', user='postgres', password='postgres', host='localhost')
         self.cursor = self.conn.cursor()
         return self.cursor
 
